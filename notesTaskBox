@@ -1,0 +1,41 @@
+1.under src
+    create
+        components
+        store
+        reducers
+        actions
+
+2. install redux
+        npm install --save redux
+
+3. under store folder
+    create a new file configureStore.js
+
+    import {crateStore,combineReducers} from 'redux'
+
+    const configureStore = () => {
+        const store = crateStore(combineReducers({
+
+        }))
+        return store
+    }
+
+    export default configureStore
+
+4. in index.js (main file,setup store)  
+
+import configureStore from './store/configureStore'
+
+const store = configureStore()
+
+store.subscribe(()=>{
+    console.log(store.getState())
+})
+
+5.inside reducers create
+projects.js
+
+const projectsInitialState = []
+const projectsReducer = 
+
+    
