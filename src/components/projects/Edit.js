@@ -19,7 +19,7 @@ class ProjectEdit extends React.Component {
     console.log(this.props.client)
     return (
       <div>
-        <h2>edit project</h2>
+        <h2>Edit project</h2>
         <ProjectFrom
           handleSubmit={this.handleSubmit}
           project={this.props.project} client={result}

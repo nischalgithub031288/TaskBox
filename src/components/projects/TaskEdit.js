@@ -21,7 +21,7 @@ class TaskEdit extends React.Component {
 
         return (
             <div>
-                <h2>edit Task</h2>
+                <h2>Task Edit </h2>
                 <AddTask handleSubmit={this.handleSubmit} task={this.props.task} />
             </div>
         )

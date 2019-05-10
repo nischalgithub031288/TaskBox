@@ -2,21 +2,35 @@ import uuid from "uuid";
 const ProjectInitialState = [
   {
     id: uuid(),
-    title: " project of ticket master",
+    title: " Maintaining Frontend",
     isCompleted: true,
     projectId: "3099dd02-f08d-4127-9682-f9edab79e5b3",
     dueDate: "2019-03-15"
   },
   {
     id: uuid(),
-    title: "project of bidding ",
+    title: "Maintaing  Backend ",
     isCompleted: "",
     projectId: "660c0b6e-df33-4e30-b4cf-8049be7cef52",
     dueDate: "2019-05-18"
   },
   {
     id: uuid(),
-    title: "project of onlinestreaming",
+    title: "Maintaing DataBase",
+    isCompleted: true,
+    projectId: "660c0b6e-df33-4e30-b4cf-8049be7cef52",
+    dueDate: "2019-08-19"
+  },
+  {
+    id: uuid(),
+    title: "Designing",
+    isCompleted: "",
+    projectId: "660c0b6e-df33-4e30-b4cf-8049be7cef52",
+    dueDate: "2019-08-19"
+  },
+  {
+    id: uuid(),
+    title: "Software Developing",
     isCompleted: true,
     projectId: "660c0b6e-df33-4e30-b4cf-8049be7cef52",
     dueDate: "2019-08-19"

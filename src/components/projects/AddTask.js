@@ -1,5 +1,7 @@
 import React from "react";
 import uuid from "uuid";
+import { Container, Row, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap'
+import { Link } from 'react-router-dom'
 
 class AddTask extends React.Component {
   constructor(props) {
@@ -49,41 +51,88 @@ class AddTask extends React.Component {
   };
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Title:
-            <input
-              type="text"
-              value={this.state.title}
-              onChange={this.nameChange}
-            />
-          </label>
-          <label>
-            <br />
-            Date:
-            <input
-              type="date"
-              value={this.state.date}
-              onChange={this.dateChange}
-            />
-          </label>
-          <br />
-          <label>
-            Completd:
-            <input
-              type="checkbox"
-              value={this.state.complete}
-              onChange={this.completeChange}
-            />
-          </label>
-          <br />
 
-          <input type='submit' />
-        </form>
-
+      <div className="container" >
         <br />
+        {/* <p className="h3 text-center">{this.props.title}</p> */}
+        <Form onSubmit={this.handleSubmit} >
+          <FormGroup>
+            <Label>
+              Task :</Label>
+            <Input type="text" value={this.state.title} onChange={this.nameChange} />
+            <br />
+
+          </FormGroup>
+          <FormGroup check>
+            <Label check>
+              {/* Status :</Label>{' '} */}
+              <Input type="checkbox" value={this.state.complete} onChange={this.completeChange} />{' '}
+              Checked/UnChecked</Label>
+
+          </FormGroup>
+          <br />
+          <FormGroup>
+            <Label>
+              Date :</Label>
+            <Input type="date" value={this.state.date} onChange={this.dateChange} />
+
+          </FormGroup>
+
+          <FormGroup>
+            <p className="text-right">
+              <Button color="primary">Submit</Button>{' '}<Link className="btn btn-primary" to="/">Back</Link>
+            </p>
+
+          </FormGroup>
+        </Form>
       </div>
+
+
+
+
+
+
+
+      // <Container>
+      //   <Row>
+      //     <Col sm="12" md={{ size: 6, offset: 3 }}>
+      //       <br />
+
+      //       <br />
+      //       <form onSubmit={this.handleSubmit}>
+      //         <label>
+      //           Title:
+      //       <input
+      //             type="text"
+      //             value={this.state.title}
+      //             onChange={this.nameChange}
+      //           />
+      //         </label>
+      //         <label>
+      //           <br />
+      //           Date:
+      //       <input
+      //             type="date"
+      //             value={this.state.date}
+      //             onChange={this.dateChange}
+      //           />
+      //         </label>
+      //         <br />
+      //         <label>
+      //           Completd:
+      //       <input
+      //             type="checkbox"
+      //             value={this.state.complete}
+      //             onChange={this.completeChange}
+      //           />
+      //         </label>
+      //         <br />
+
+      //         <input type='submit' />
+      //       </form>
+      //       </Col>
+      //   </Row>
+      // </Container>
     );
   }
 }

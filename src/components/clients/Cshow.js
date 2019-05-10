@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { removeClient } from "../../actions/clients";
+import { Button } from 'reactstrap'
 
 const ClientShow = props => {
   console.log(props);
@@ -19,10 +20,10 @@ const ClientShow = props => {
 
   return (
     <div>
-      <h2>{props.client.name}</h2>
-      <h2>{props.client.email}</h2>
+      <h2>Name of Employee : {'    '} {props.client.name}</h2>
+      <h2>Email : {'   '} {props.client.email}</h2>
 
-      <br />
+
 
       <h2>Total Task Assign - {output3.length} </h2>
       {/* {props.projects.map(project => {
@@ -37,7 +38,7 @@ const ClientShow = props => {
 
       {/* <Link to={`/clients/edit/${props.client.id}`}>edit</Link> */}
 
-      <button
+      <Button color="primary"
         onClick={() => {
           const confirmDelete = window.confirm("Are you sure?");
           if (confirmDelete) {
@@ -46,10 +47,10 @@ const ClientShow = props => {
           }
         }}
       >
-        delete
-      </button>
+        Delete
+      </Button> {'   '}
 
-      <Link to="/clients">back</Link>
+      <Link className="btn btn-primary" to="/clients">back</Link>
     </div>
   );
 };

@@ -4,7 +4,9 @@ const ClientInitialState = [
   { id: uuid(), name: "Nischal", email: "nisch@gmail.com" },
   { id: uuid(), name: "Sanjay", email: "sanj@gmail.com" },
   { id: uuid(), name: "Pavan", email: "pavan@gmail.com" },
-  { id: uuid(), name: "Sachin", email: "sanchin@gmail.com" }
+  { id: uuid(), name: "Sachin", email: "sanchin@gmail.com" },
+  { id: uuid(), name: "Rohan", email: "rohan@gmail.com" },
+  { id: uuid(), name: "Preeti", email: "preeti@gmail.com" }
 ];
 
 const clientReducer = (state = ClientInitialState, action) => {

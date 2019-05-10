@@ -3,7 +3,10 @@ const ProjectInitialState = [
   { id: uuid(), name: "Number Pattern", category: "Nischal" },
   { id: uuid(), name: "Ticket Master", category: "Pavan" },
   { id: uuid(), name: "E Commerce", category: "Sachin" },
-  { id: uuid(), name: "Auction Bidding", category: "Sanjay" }
+  { id: uuid(), name: "Contact Maintance", category: "Sanjay" },
+  { id: uuid(), name: "Food Master", category: "Rohan" },
+  { id: uuid(), name: "Online Recharge", category: "Preeti" }
+
 ];
 console.log(ProjectInitialState);
 const projectsReducer = (state = ProjectInitialState, action) => {

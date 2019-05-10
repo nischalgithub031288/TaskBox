@@ -12,46 +12,56 @@ import ClientList from "./components/clients/Clist";
 import ClientNew from "./components/clients/Cnew";
 import ClientShow from "./components/clients/Cshow";
 import ClientEdit from "./components/clients/Cedit";
+import Navbar from "./components/HomePage/navbar"
+import Footer from "./components/HomePage/footer"
 
 //import TaskList from "./components/tasks/Tlist";
 //import ProjectNew from "./component/tasks/Tnew";
 
 class App extends Component {
   render() {
+    const style = {
+      background: '#f2f2f2',
+      height: '550px'
+    }
     return (
       <BrowserRouter>
-        <div>
-          <h2>TaskBox</h2>
+        <>
+          <Navbar />
+          <div style={style}>
+            {/* <h2>TaskBox</h2>
           <Link to="/"> Home </Link>
           <Link to="/projects"> Projects </Link>
           <Link to="/clients"> Clients</Link>
-          {/* <Link to="/tasks">Tasks</Link> */}
+          <Link to="/tasks">Tasks</Link> */}
 
-          <Switch>
-            <Route path="/" component={Dashboard} exact={true} />
-            <Route path="/projects" component={ProjectList} exact={true} />
-            <Route path="/projects/new" component={ProjectNew} exact={true} />
-            <Route path="/projects/:id" component={ProjectShow} exact={true} />
-            <Route
-              path="/projects/edit/:id"
-              component={ProjectEdit}
-              exact={true}
-            />
-            <Route path="/projects/task" component={AddTask} exact={true} />
-            <Route path="/tasks/edit/:id" component={TaskEdit} exact={true} />
+            <Switch>
+              <Route path="/" component={Dashboard} exact={true} />
+              <Route path="/projects" component={ProjectList} exact={true} />
+              <Route path="/projects/new" component={ProjectNew} exact={true} />
+              <Route path="/projects/:id" component={ProjectShow} exact={true} />
+              <Route
+                path="/projects/edit/:id"
+                component={ProjectEdit}
+                exact={true}
+              />
+              <Route path="/projects/task" component={AddTask} exact={true} />
+              <Route path="/tasks/edit/:id" component={TaskEdit} exact={true} />
 
-            <Route path="/clients" component={ClientList} exact={true} />
-            <Route path="/clients/new" component={ClientNew} exact={true} />
-            <Route path="/clients/:id" component={ClientShow} exact={true} />
-            <Route
-              path="/clients/edit/:id"
-              component={ClientEdit}
-              exact={true}
-            />
+              <Route path="/clients" component={ClientList} exact={true} />
+              <Route path="/clients/new" component={ClientNew} exact={true} />
+              <Route path="/clients/:id" component={ClientShow} exact={true} />
+              <Route
+                path="/clients/edit/:id"
+                component={ClientEdit}
+                exact={true}
+              />
 
-            {/* <Route path="tasks/new" component={TaskNew} exact={true} /> */}
-          </Switch>
-        </div>
+              {/* <Route path="tasks/new" component={TaskNew} exact={true} /> */}
+            </Switch>
+          </div>
+          <Footer />
+        </>
       </BrowserRouter>
     );
   }

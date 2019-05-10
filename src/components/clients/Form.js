@@ -1,5 +1,6 @@
 import React from "react";
 import uuid from "uuid";
+import { Label, Button, Input } from 'reactstrap'
 
 class ClientForm extends React.Component {
   constructor(props) {
@@ -31,27 +32,31 @@ class ClientForm extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <label>
-            name :
-            <input
+          <Label>
+            Name :
+
+          <Input
               type="text"
               value={this.state.name}
               onChange={this.nameChange}
               name="name"
             />
-          </label>
-          <label>
-            <br />
-            email :
-            <input
+          </Label>
+          <br />
+
+
+          <Label>
+
+            Email :
+            <Input
               type="text"
               value={this.state.email}
               onChange={this.nameChange}
               name="email"
             />
-          </label>
+          </Label>
           <br />
-          <button>Submit</button>
+          <Button color="primary">Submit</Button>
         </form>
       </div>
     );
